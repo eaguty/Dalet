@@ -1,7 +1,7 @@
 <?PHP
 
 //$header = array("Authorization: Basic $auth");
-$host= "http://10.67.58.96/ApiIungoDalet/api/v2/ApiIungoVerizonBS/";
+$host= "http://ip/ApiIungoDalet/api/v2/ApiIungoVerizonBS/";
 $postData = json_encode(array('idAsset'=>intval('6734189'), 'IdVerizon'=>strval ('123456789'), 'estatus'=>strval ('completo'), 'programa'=>strval ('entretenimiento')));
 $ch = curl_init($host);
 curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
