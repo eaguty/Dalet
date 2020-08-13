@@ -12,10 +12,13 @@ curl_setopt($ch, CURLOPT_POST, 1);
 curl_setopt($ch, CURLOPT_POSTFIELDS, $postData);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 $return = curl_exec($ch);
+$header_size = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
+$header = substr($response, 0, $header_size);
+$body = substr($response, $header_size);
 //echo $return;
 curl_close($ch);
 //echo $return;
-var_dump($return);
+echo($body);
 
 
 
